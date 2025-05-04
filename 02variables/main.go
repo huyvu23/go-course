@@ -5,6 +5,7 @@ import "fmt"
 // this is a constant variable
 // Constants are immutable values that are known at compile time and do not change for the life of the program.
 // They are declared using the const keyword and can be of any type.
+
 const LoginToken string = "abc123"
 
 func main() {
