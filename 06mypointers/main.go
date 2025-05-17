@@ -11,6 +11,9 @@ func main() {
 	fmt.Println(x)  // 10
 	fmt.Println(*p) // 10 (lấy giá trị tại địa chỉ p)
 
+	fmt.Println("address p: ", &p)
+
+	// * operator is used to access the value at the memory address
 	*p = 99        // thay đổi giá trị tại địa chỉ p
 	fmt.Println(x) // 99 (x bị thay đổi)
 

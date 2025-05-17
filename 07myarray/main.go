@@ -21,4 +21,8 @@ func main() {
 	fmt.Println("Sports List: ", sportsList)
 	fmt.Println("Length of sports list: ", len(sportsList))
 
+	// list language programming
+	programmingLanguages := [...]string{"go", "python", "java", "javascript"} // here length is inferred
+	fmt.Println("Programming Languages: ", programmingLanguages)
+
 }
