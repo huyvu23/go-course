@@ -41,7 +41,7 @@ func main() {
 
 	// `fruitList = append(fruitList[:2])` is slicing the `fruitList` slice from the beginning up to index 2
 	fruitList = append(fruitList[:2])
-	fmt.Println("Fruit List after getting elements: ", fruitList)
+	fmt.Println("Fruit List after append elements: ", fruitList)
 
 	// Cắt ra một phần của slice fruitList — từ index 2 (bao gồm) đến index 3 (không bao gồm).
 	// fruitList = append(fruitList[2:3])
@@ -56,6 +56,15 @@ func main() {
 	// highScores[1] = 200 // panic: runtime error: index out of range [1] with length 1
 	// Nhưng nếu dùng append thì không bị panic , nó sẽ tính và phân bổ lại bộ nhớ
 	highScores = append(highScores, 200, 300, 400, 500)
-	fmt.Println(len(highScores), cap(highScores))
+	fmt.Println("length:", len(highScores), "capacity:", cap(highScores), highScores)
+
+	// LOOP
+	for i := 0; i < len(highScores); i++ {
+		fmt.Println(highScores[i])
+	}
+
+	for i, itemHightScore := range highScores {
+		fmt.Println("Index:", i, "itemHightScore:", itemHightScore)
+	}
 
 }

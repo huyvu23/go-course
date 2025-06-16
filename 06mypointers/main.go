@@ -17,7 +17,9 @@ func main() {
 	*p = 99        // thay đổi giá trị tại địa chỉ p
 	fmt.Println(x) // 99 (x bị thay đổi)
 
-	var y *int // y là một con trỏ trỏ đến kiểu int
-	fmt.Print("address of y: ", &y)
+	var y *int // y là một con trỏ trỏ đến kiểu int với giá trị là nil vì không được gán dữ liệu
+	fmt.Println("address of y: ", &y)
+	fmt.Printf("Type of x is %T\n", y)
+	fmt.Println("Value of y:", y)
 
 }
