@@ -105,3 +105,41 @@ func main() {
 	fmt.Println("số phần tử đã copy:", n) // 2
 }
 ```
+
+## Pointers
+
+- ❗ Lưu ý quan trọng: Không được dereference con trỏ nil
+
+```go
+
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	// - Thì mặc định y có giá trị là nil (tức là chưa trỏ đến vùng nhớ nào), nếu bạn cố *y = 10 thì chương trình sẽ panic vì dereference nil pointer.
+  	var y *int
+
+	// CÁCH 1:
+	// a := 5
+	// var y *int = &a
+	// fmt.Println(*y) // 👉 5
+
+
+	// Cách 2: Dùng new(int) để cấp phát vùng nhớ
+	// var y *int = new(int)
+	// *y = 10
+	// fmt.Println(*y) // 👉 10
+
+	// CÁCH 3 :  Khai báo nhanh bằng := và new()
+	y := new(int)
+	*y = 20
+	fmt.Println(*y) // 👉 20
+
+	age := 23
+	// fmt.Println(*age) // ❌ lỗi: cannot indirect age (type int) => Vì *age nghĩa là: lấy giá trị tại địa chỉ mà age trỏ tới. Nhưng age chỉ là một giá trị số, không phải địa chỉ (con trỏ).
+
+}
+```

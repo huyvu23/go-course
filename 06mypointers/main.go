@@ -19,7 +19,13 @@ func main() {
 
 	var y *int // y là một con trỏ trỏ đến kiểu int với giá trị là nil vì không được gán dữ liệu
 	fmt.Println("address of y: ", &y)
-	fmt.Printf("Type of x is %T\n", y)
+	fmt.Printf("Type of x is : %T\n", y)
 	fmt.Println("Value of y:", y)
 
+	age := 23
+	age2 := &age
+	fmt.Println("address of age2:", age2)
+	*age2 = 30
+	fmt.Println("value of age2:", *age2)
+	fmt.Println("value of age:", &age)
 }

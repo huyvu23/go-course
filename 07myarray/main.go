@@ -17,12 +17,15 @@ func main() {
 	fmt.Println("Fruit List: ", fruitList)
 	fmt.Println("Length of fruit list: ", len(fruitList))
 
-	var sportsList = []string{"soccer", "basketball", "tennis", "cricket"}
-	fmt.Println("Sports List: ", sportsList)
-	fmt.Println("Length of sports list: ", len(sportsList))
-
 	// list language programming
 	programmingLanguages := [...]string{"go", "python", "java", "javascript"} // here length is inferred
 	fmt.Println("Programming Languages: ", programmingLanguages)
 
+	for index, language := range programmingLanguages {
+		if language == "java" {
+			programmingLanguages[index] = "c"
+		}
+		fmt.Println("language:", language)
+	}
+	fmt.Println("Programming Languages: ", programmingLanguages)
 }
