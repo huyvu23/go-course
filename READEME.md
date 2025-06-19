@@ -143,3 +143,18 @@ func main() {
 
 }
 ```
+
+## So sánh make và new
+
+- make: dùng cho slice, map ,chan
+- Dùng cho mọi kiểu dữ liệu
+
+---
+
+- make trả về giá trị đã dùng được
+- new trả về con trỏ đến vùng nhớ
+
+---
+
+- make có thể thao tác trực tiếp
+- new Cần dereference (\*p) để thao tác

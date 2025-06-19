@@ -4,6 +4,13 @@ import "fmt"
 
 func main() {
 	fmt.Println("Hello, World!")
+	// age := new(int)
+	// fmt.Println("age:", *age)
+	// *age = 20
+	// fmt.Println("age:", *age)
+
+	// name := "Domnik"
+	// fmt.Printf("%T", name)
 }
 
 // This is a simple Go program that prints "Hello, World!" to the console.
